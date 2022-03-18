@@ -1,0 +1,20 @@
+{
+  "name": "ndhu-mwwte",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/remark-prismjs": "^0.5.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@tailwindcss/postcss7-compat": "2.0.2",
+    "autoprefixer": "9",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "7",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}
