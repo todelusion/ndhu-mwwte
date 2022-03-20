@@ -8,7 +8,13 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+    },
+    fontFamily: {
+      sans: ['Noto Sans TC','Roboto'],
+      serif: ['Noto Serif TC','Times'],
+      dela: ['Dela Gothic One']
+    }
   },
   variants: {
     extend: {},
