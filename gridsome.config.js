@@ -1,8 +1,6 @@
 const tailwindcss = require("tailwindcss");
 
 module.exports = {
-  siteName: 'ndhu-mwwte',
-  siteDescription: 'ndhu-mwwte',
   css: {
     loaderOptions: {
       postcss: {
