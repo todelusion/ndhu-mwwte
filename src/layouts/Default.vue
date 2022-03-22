@@ -1,17 +1,42 @@
 <template>
-<div class="landingPage h-screen">
-  <div class="max-w-[1440px] m-auto flex items-end"> 
-    <g-link class="flex">
-      <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="100" />
-    </g-link>
-    <div class="">
-      <g-link to="/" class="mx-5 hover:bg-[#FEC6B5] font-serif font-medium duration-100">BLOG</g-link>
-      <g-link to="/About/" class="mx-5 hover:bg-[#FEC6B5] font-serif font-medium duration-100">ABOUT</g-link>
-      <g-link class="mx-5 hover:bg-[#FEC6B5] font-serif font-medium duration-100">PODCAST</g-link>
+  <div class="layout">
+    <div class="landingImage h-screen">
+      <header class="mx-auto max-w-[1440px] px-5 pt-10">
+        <nav class="flex items-center justify-between">
+          <g-link to="/">
+            <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" />
+          </g-link>
+          <div class="button">
+            <g-link
+              to="/blog/"
+              class="mx-5 font-serif font-medium text-white duration-100 hover:bg-[#FEC6B5]"
+              >BLOG</g-link
+            >
+            <g-link
+              to="/About/"
+              class="mx-5 font-serif font-medium text-white duration-100 hover:bg-[#FEC6B5]"
+              >ABOUT</g-link
+            >
+            <g-link
+              class="mx-5 font-serif font-medium text-white duration-100 hover:bg-[#FEC6B5]"
+              >PODCAST</g-link
+            >
+          </div>
+        </nav>
+        <div>
+          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="300" class="mx-auto mt-52" />
+          <!-- <h1
+            class="mt-96 pb-10 font-sans 2xl:text-7xl font-bold 2xl:leading-[5rem] tracking-widest text-white"
+          >
+            移工<br />與她的老人
+          </h1> -->
+        </div>
+      </header>
     </div>
-</div>
-</div>
-
+    <section class="mx-auto max-w-[1440px] pt-10">
+      <h1>TEST</h1>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -19,22 +44,22 @@ export default {
   metaInfo: {
     link: [
       {
-        rel: 'favicon',
-        href: 'favicon.ico'
-      }
-    ]
-  }
-}
+        rel: "favicon",
+        href: "favicon.ico",
+      },
+    ],
+  },
+};
 </script>
 
 <style>
 body {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
-.landingPage {
-  background-image: url("~@/assets/landingPage.jpg");
+.landingImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url("~@/assets/landingPage.jpg");
   background-size: cover;
   background-position: center;
 }
-
 </style>
