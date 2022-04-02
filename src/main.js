@@ -7,12 +7,12 @@ import DefaultLayout from "~/layouts/Default.vue";
 import "./assets/tailwind.css";
 
 import { gsap } from "gsap";
-import { PixiPlugin } from "gsap/PixiPlugin.js";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-};
-
-gsap.registerPlugin(PixiPlugin, MotionPathPlugin);
+}

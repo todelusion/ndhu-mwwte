@@ -1,50 +1,47 @@
 <template>
   <div class="layout">
-    <div class="landingImage h-screen">
-      <header class="mx-auto max-w-[1440px] px-5 pt-10">
+    <header
+      class="absolute top-0 left-0 w-full px-20 py-7 z-[1000]"
+    >
+      <nav class="flex w-full" :class="{ fixed: active }">
         <!-- 這邊使用scroll監聽事件改為css fixed讓滑鼠往下滾動後能維持在固定位置 -->
-        <nav class="flex w-full items-center" :class="{ fixed: active }">
-          <g-link to="/">
-            <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" />
-          </g-link>
-          <div class="button">
+        <g-link to="/">
+          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" />
+        </g-link>
+        <ul class="flex justify-center items-center text-black">
+          <li class="ml-20">
             <g-link
               to="/blog/"
-              class="mx-7 rounded-lg p-2 font-serif text-xl font-black tracking-wider text-white duration-100 hover:bg-[#FEC6B5] hover:text-[#2E4265]"
               >BLOG</g-link
             >
+          </li>
+          <li class="ml-20">
             <g-link
               to="/About/"
-              class="mx-7 rounded-lg p-2 font-serif text-xl font-black tracking-wider text-white duration-100 hover:bg-[#FEC6B5] hover:text-[#2E4265]"
               >ABOUT</g-link
             >
+          </li>
+          <li class="ml-20">
             <g-link
-              class="mx-7 rounded-lg p-2 font-serif text-xl font-black tracking-wider text-white duration-100 hover:bg-[#FEC6B5] hover:text-[#2E4265]"
               >PODCAST</g-link
             >
-          </div>
-        </nav>
-
-        <!-- <div>
-          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="300" class="mx-auto mt-52" />
-          <h1
-            class="mt-96 pb-10 font-sans 2xl:text-7xl font-bold 2xl:leading-[5rem] tracking-widest text-white"
-          >
-            移工<br />與她的老人
-          </h1>
-        </div> -->
-      </header>
-    </div>
-    <section>
-      <div class="mx-auto max-w-[1440px] pt-10">
-        <h1>TEST</h1>
-        <p class="text-2xl">
-          Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit. Illo
-          similique velit modi magnam <br />sint reiciendis optio excepturi
-          cupiditate laborum necessitatibus.
-        </p>
-      </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="relative w-full h-screen">
+      <g-image id="landingPage" src="~/assets/landingPage.jpg" class="absolute object-cover w-full h-full z-10"></g-image>
     </section>
+
+
+    <div class="relative z-20">
+      <h1>TEST</h1>
+      <p class="text-2xl">
+        Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit. Illo
+        similique velit modi magnam <br />sint reiciendis optio excepturi
+        cupiditate laborum necessitatibus.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -57,28 +54,44 @@ export default {
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.parallaxScroll)
   },
   methods: {
     handleScroll() {
-      this.active = window.scrollY > 40 ? true : false;
+      console.log('fixed');
+      this.active = window.scrollY > 28 ? true : false;
+    },
+    parallaxScroll() {
+      console.log('parallax');
+      let landingPage = document.getElementById('landingPage')
+      let valueY = window.scrollY;
+      landingPage.style.top = valueY * 0.5 + 'px';
     },
   },
 };
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
+  min-height: 100vh;
   background-color: #f5f5f5;
 }
-.landingImage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
-    url("~@/assets/landingPage.jpg");
-  background-size: cover;
-  background-position: center;
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  height: 200px;
+  width: 100%;
+  z-index: 10000;
 }
 .fixed {
   position: fixed;
   top: 0;
-  padding-right: 2rem;
 }
 </style>
