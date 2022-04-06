@@ -35,7 +35,7 @@
         </div> -->
       </header>
     </div>
-    <section>
+    <section id="Parallax-Scrolling">
       <div class="mx-auto max-w-[1440px] pt-10">
         <h1>TEST</h1>
         <p class="text-2xl">
@@ -81,4 +81,26 @@ body {
   top: 0;
   padding-right: 2rem;
 }
+
+/* section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#Parallax-Scrolling::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #f5f5f5;
+  z-index: 10000;
+}
+
 </style>
