@@ -7,11 +7,12 @@ import DefaultLayout from "~/layouts/Default.vue";
 import "./assets/tailwind.css";
 
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
-};
-
-gsap.registerPlugin(ScrollTrigger);
+}
