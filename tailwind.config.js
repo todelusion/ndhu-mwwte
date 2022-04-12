@@ -9,6 +9,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'main': '#FEC6B5',
+        'second': '#E07658'
+      }
     },
     fontFamily: {
       sans: ['Noto Sans TC','Roboto'],

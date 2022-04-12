@@ -6,14 +6,16 @@
         <g-link to="/">
           <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" />
         </g-link>
-        <ul class="flex items-center justify-center text-white font-serif text-xl font-black tracking-wider">
-          <li class="ml-16 hover:bg-[#FDC6B5] hover:text-black p-3 rounded-2xl">
+        <ul
+          class="flex items-center justify-center font-serif text-xl font-black tracking-wider text-white"
+        >
+          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
             <g-link to="/blog/">BLOG</g-link>
           </li>
-          <li class="ml-16 hover:bg-[#FDC6B5] hover:text-black p-3 rounded-2xl">
+          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
             <g-link to="/About/">ABOUT</g-link>
           </li>
-          <li class="ml-16 hover:bg-[#FDC6B5] hover:text-black p-3 rounded-2xl">
+          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
             <g-link>PODCAST</g-link>
           </li>
         </ul>
@@ -61,9 +63,9 @@ body {
   background-color: #f5f5f5;
 }
 #landingPage {
-  filter: brightness(0.75)
+  filter: brightness(0.75);
 }
-section::before {
+/* section::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -71,31 +73,9 @@ section::before {
   height: 100px;
   width: 100%;
   z-index: 10000;
-}
+} */
 .fixed {
   position: fixed;
   top: 0;
 }
-
-/* section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-#Parallax-Scrolling::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background: #f5f5f5;
-  z-index: 10000;
-}
-
 </style>
