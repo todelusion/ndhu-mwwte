@@ -1,10 +1,9 @@
 <template>
   <div class="layout">
     <header class="absolute top-0 left-0 z-[1000] w-full px-20 py-7">
-      <nav class="flex w-full" :class="{ fixed: active }">
-        <!-- 這邊使用scroll監聽事件改為css fixed讓滑鼠往下滾動後能維持在固定位置 -->
+      <nav class="flex w-full none_fixed" :class="{ fixed: active }">
         <g-link to="/">
-          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" />
+          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" class="min-w-[100px]" />
         </g-link>
         <ul
           class="flex items-center justify-center font-serif text-xl font-black tracking-wider text-white"
@@ -65,17 +64,16 @@ body {
 #landingPage {
   filter: brightness(0.75);
 }
-/* section::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  background: #fff;
-  height: 100px;
-  width: 100%;
-  z-index: 10000;
-} */
 .fixed {
   position: fixed;
   top: 0;
+  left: 0;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  transition: background-color 0.2s ease-in-out;
+  background: rgba(0, 0, 0, 0.7);
+}
+.headerColor {
+  
 }
 </style>
