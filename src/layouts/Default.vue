@@ -3,10 +3,10 @@
     <header class="absolute top-0 left-0 z-[1000] w-full px-20 py-7">
       <nav class="flex w-full none_fixed" :class="{ fixed: active }">
         <g-link to="/">
-          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="125" class="min-w-[100px]" />
+          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="100" />
         </g-link>
         <ul
-          class="flex items-center justify-center font-serif text-xl font-black tracking-wider text-white"
+          class="flex items-center justify-center font-serif text-lg font-black tracking-wider text-white"
         >
           <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
             <g-link to="/blog/">BLOG</g-link>
@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       active: false,
+      test: 'test'
     };
   },
   created() {
@@ -73,7 +74,5 @@ body {
   transition: background-color 0.2s ease-in-out;
   background: rgba(0, 0, 0, 0.7);
 }
-.headerColor {
-  
-}
+
 </style>
