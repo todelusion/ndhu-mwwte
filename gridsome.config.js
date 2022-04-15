@@ -1,11 +1,14 @@
-const tailwindcss = require("tailwindcss");
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
+  siteName: 'ndhu-mwwte',
   css: {
     loaderOptions: {
       postcss: {
         plugins: [
-          tailwindcss
+          tailwindcss,
+          autoprefixer,
         ],
       },
     },
@@ -14,7 +17,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/posts/**/*.md',
+        path: ['content/posts/**/*.md'],
         typeName: 'Post',
         route: '/blog/:slug'
       }

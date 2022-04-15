@@ -9,10 +9,7 @@
           class="flex items-center justify-center font-serif text-lg font-black tracking-wider text-white"
         >
           <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
-            <g-link to="/blog/">BLOG</g-link>
-          </li>
-          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
-            <g-link to="/About/">ABOUT</g-link>
+            <g-link>About</g-link>
           </li>
           <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
             <g-link>PODCAST</g-link>
@@ -32,22 +29,22 @@ export default {
       test: 'test'
     };
   },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("scroll", this.parallaxScroll);
-  },
-  methods: {
-    handleScroll() {
-      console.log("fixed");
-      this.active = window.scrollY > 28 ? true : false;
-    },
-    parallaxScroll() {
-      console.log("parallax");
-      let landingPage = document.getElementById("landingPage");
-      let valueY = window.scrollY;
-      landingPage.style.top = valueY * 0.5 + "px";
-    },
-  },
+  // created() {
+  //   window.addEventListener("scroll", this.handleScroll);
+  //   window.addEventListener("scroll", this.parallaxScroll);
+  // },
+  // methods: {
+  //   handleScroll() {
+  //     console.log("fixed");
+  //     this.active = window.scrollY > 28 ? true : false;
+  //   },
+  //   parallaxScroll() {
+  //     console.log("parallax");
+  //     let landingPage = document.getElementById("landingPage");
+  //     let valueY = window.scrollY;
+  //     landingPage.style.top = valueY * 0.5 + "px";
+  //   },
+  // },
 };
 </script>
 
