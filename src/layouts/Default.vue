@@ -1,22 +1,22 @@
 <template>
   <div class="layout">
     <header class="absolute top-0 left-0 z-[1000] w-full px-20 py-7">
-      <nav class="flex w-full none_fixed" :class="{ fixed: active }">
-        <g-link to="/">
-          <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="100" />
-        </g-link>
-        <ul
-          class="flex items-center justify-center font-serif text-lg font-black tracking-wider text-white"
-        >
-          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
-            <g-link>About</g-link>
-          </li>
-          <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
-            <g-link>PODCAST</g-link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <nav class="flex w-full none_fixed" :class="{ fixed: active }">
+          <g-link to="/">
+            <g-image alt="mwwte_LOGO" src="~/assets/LOGO.png" width="100" />
+          </g-link>
+          <ul
+            class="flex items-center justify-center font-serif text-lg font-black tracking-wider text-white"
+          >
+            <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
+              <g-link to="/about/">ABOUT</g-link>
+            </li>
+            <li class="ml-16 rounded-2xl p-3 hover:bg-main hover:text-black">
+              <g-link>PODCAST</g-link>
+            </li>
+          </ul>
+        </nav>
+      </header>
     <slot />
   </div>
 </template>
@@ -29,6 +29,9 @@ export default {
       test: 'test'
     };
   },
+  // metaInfo: {
+  //   base: { href: '/public' }
+  // }
   // created() {
   //   window.addEventListener("scroll", this.handleScroll);
   //   window.addEventListener("scroll", this.parallaxScroll);

@@ -1,8 +1,9 @@
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
-
 module.exports = {
   siteName: 'ndhu-mwwte',
+  // pathPrefix: '/',
+  outputDir: 'dist',
   css: {
     loaderOptions: {
       postcss: {
@@ -19,7 +20,8 @@ module.exports = {
       options: {
         path: ['content/posts/**/*.md'],
         typeName: 'Post',
-        route: '/blog/:slug'
+        route: '/blog/:slug',
+        remark: {}
       }
     },
     {
