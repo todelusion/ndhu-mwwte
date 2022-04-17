@@ -1,5 +1,5 @@
 <template>
-<Layout>
+  <Layout>
     <h2>About</h2>
-</Layout>
+  </Layout>
 </template>
