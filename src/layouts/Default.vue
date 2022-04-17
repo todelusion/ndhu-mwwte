@@ -29,25 +29,26 @@ export default {
       test: 'test'
     };
   },
-  // metaInfo: {
-  //   base: { href: '/public' }
-  // }
-  // created() {
-  //   window.addEventListener("scroll", this.handleScroll);
-  //   window.addEventListener("scroll", this.parallaxScroll);
-  // },
-  // methods: {
-  //   handleScroll() {
-  //     console.log("fixed");
-  //     this.active = window.scrollY > 28 ? true : false;
-  //   },
-  //   parallaxScroll() {
-  //     console.log("parallax");
-  //     let landingPage = document.getElementById("landingPage");
-  //     let valueY = window.scrollY;
-  //     landingPage.style.top = valueY * 0.5 + "px";
-  //   },
-  // },
+  created() {
+    if (process.isClient) {
+    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.parallaxScroll);
+    }
+  },
+  methods: {
+    handleScroll() {
+      if (process.isClient) {
+        this.active = window.scrollY > 28 ? true : false;
+      }
+    },
+    parallaxScroll() {
+      if (process.isClient) {
+        let landingPage = document.getElementById("landingPage");
+        let valueY = window.scrollY;
+        landingPage.style.top = valueY * 0.5 + "px";
+      }
+    },
+  },
 };
 </script>
 
