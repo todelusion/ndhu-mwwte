@@ -16,12 +16,12 @@
           class="hidden items-center justify-center font-serif text-lg font-black tracking-wider text-white sm:flex"
         >
           <li
-            class="bg-main ml-16 rounded-2xl p-3 text-gray-900 duration-150 hover:scale-105"
+            class="bg-main ml-16 rounded-full p-3 text-gray-900 duration-150 bg-primary hover:scale-105"
           >
             <g-link to="/about/">ABOUT</g-link>
           </li>
           <li
-            class="bg-main ml-16 rounded-2xl p-3 text-gray-900 duration-150 hover:scale-105"
+            class="bg-main ml-16 rounded-full p-3 text-gray-900 duration-150 bg-primary hover:scale-105"
           >
             <g-link>PODCAST</g-link>
           </li>
