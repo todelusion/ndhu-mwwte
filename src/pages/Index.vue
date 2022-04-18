@@ -26,8 +26,8 @@
       </div>
     </section>
 
-    <div class="relative z-20 bg-third">
-      <div class="mx-auto max-w-[1440px] py-20 text-center">
+    <div class="relative z-20 bg-third py-20">
+      <div class="mx-auto max-w-[1440px] text-center">
         <h1 class="font-sans text-base font-normal text-second">
           移工與她的老人
         </h1>
@@ -41,9 +41,9 @@
         ></g-image>
       </div>
     </div>
-    <div class="relative z-20 bg-white py-20">
+    <div class="relative z-20 bg-white py-20 flex justify-center">
       <div
-        class="mx-auto grid max-w-[1440px] grid-flow-col grid-rows-2 justify-items-center gap-y-16 bg-white text-center"
+        class="grid max-w-[1440px] grid-flow-col grid-rows-6 auto-cols-[340px] justify-items-center gap-y-16 gap-x-20 auto-rows-max bg-white text-center md:grid-rows-3 lg:grid-rows-2"
       >
         <div
           class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
