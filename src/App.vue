@@ -9,7 +9,7 @@
       <router-link to="/">
         <img
           alt="mwwte_LOGO"
-          src="./assets/LOGO.png"
+          src="../public/images/LOGO.png"
           width="100"
           class="min-w-[100px] duration-150 hover:scale-105"
         >
