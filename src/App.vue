@@ -1,35 +1,34 @@
 <template>
-  <header
-    class="top-0 left-0 z-[1000] flex w-full items-center justify-center px-20 py-7 sm:justify-start md:absolute"
-  >
     <nav
-      class="fixed top-0 left-0 w-full px-20 flex justify-center md:justify-start"
+      class="fixed z-50 w-full flex justify-center"
       :class="{ bg_black: active, bg_none: !active }"
     >
-      <router-link to="/">
-        <img
-          alt="mwwte_LOGO"
-          src="../public/images/LOGO.png"
-          width="100"
-          class="min-w-[100px] duration-150 hover:scale-105"
-        >
-      </router-link>
       <ul
-        class="hidden items-center justify-center font-serif text-lg font-black tracking-wider text-white sm:flex"
+        class="flex items-center justify-center font-serif text-sm font-black tracking-wider"
       >
+        <li>
+          <router-link to="/">
+            <img
+              alt="mwwte_LOGO"
+              src="../public/images/LOGO.png"
+              width="75"
+              class="min-w-[75px] duration-150 hover:scale-105"
+            />
+          </router-link>
+
+        </li>
         <li
-          class="bg-main ml-16 rounded-full bg-primary p-3 text-gray-900 duration-150 hover:scale-105"
+          class="bg-main ml-5 rounded-full bg-primary p-3 text-gray-900 duration-150 hover:scale-105"
         >
           <router-link to="/about">ABOUT</router-link>
         </li>
         <li
-          class="bg-main ml-16 rounded-full bg-primary p-3 text-gray-900 duration-150 hover:scale-105"
+          class="bg-main ml-5 rounded-full bg-primary p-3 text-gray-900 duration-150 hover:scale-105"
         >
           <router-link to="/blog">BLOG</router-link>
         </li>
       </ul>
     </nav>
-  </header>
   <router-view />
 </template>
 
@@ -48,14 +47,14 @@ export default {
     handleScroll() {
       this.active = window.scrollY > 28 ? true : false;
     },
-    parallaxScroll() {
-      let landingPage = document.getElementById("landingPage");
-      let valueY = window.scrollY;
-      let screenX = document.body.clientWidth;
-      if (screenX>=768){
-        landingPage.style.top = valueY * 0.5 + "px";
-      }
-    },
+    // parallaxScroll() {
+    //   let landingPage = document.getElementById("landingPage");
+    //   let valueY = window.scrollY;
+    //   let screenX = document.body.clientWidth;
+    //   if (screenX>=768){
+    //     landingPage.style.top = valueY * 0.5 + "px";
+    //   }
+    // },
   },
 };
 </script>
@@ -76,20 +75,20 @@ body {
   filter: brightness(0.75);
 }
 
-@media (min-width: 768px) {
-  .bg_black {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+/* @media (min-width: 768px) {
+  
+} */
+
+.bg_black {
     padding-left: 5rem;
     padding-right: 5rem;
+    /* border-radius: 9999px; */
     transition: background-color 0.2s ease-in-out;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.715);
   }
   .bg_none {
+    /* border-radius: 9999px; */
     background: rgba(0, 0, 0, 0);
     transition: background-color 0.2s ease-in-out;
   }
-}
 </style>

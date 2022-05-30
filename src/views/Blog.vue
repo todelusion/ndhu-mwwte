@@ -3,8 +3,8 @@
     <img
       id="landingPage"
       src="../assets/landingPage.jpg"
-      class="absolute z-10 h-full w-full object-cover"
-    >
+      class="absolute h-full w-full object-cover"
+    />
     <div
       class="absolute bottom-0 z-10 flex w-full animate-bounce justify-center"
     >
@@ -33,11 +33,7 @@
       <h2 class="font-serif text-4xl font-semibold text-gray-800">
         0321課堂側記 讀書會與壽豐國中組分享
       </h2>
-      <img
-        src="../assets/post01.jpg"
-        width="650"
-        class="mx-auto mt-5"
-      >
+      <img src="../assets/post01.jpg" width="650" class="mx-auto mt-5" />
     </div>
   </div>
   <div class="relative z-20 bg-white py-20 flex justify-center">
@@ -56,7 +52,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
       <div
         class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
@@ -70,7 +66,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
       <div
         class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
@@ -84,7 +80,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
       <div
         class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
@@ -96,7 +92,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
       <div
         class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
@@ -110,7 +106,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
       <div
         class="rounded-2xl bg-white p-5 duration-150 hover:drop-shadow-2xl active:scale-95"
@@ -122,7 +118,7 @@
           height="300"
           fit="cover"
           class="mx-auto mt-6"
-        >
+        />
       </div>
     </div>
   </div>
